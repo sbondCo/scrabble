@@ -4,7 +4,7 @@
     {
       "label": "Serve",
       "type": "shell",
-      "command": "cargo run",
+      "command": "RUST_LOG=scrabble cargo run",
       "group": {
         "kind": "build",
         "isDefault": true
