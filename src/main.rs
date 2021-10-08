@@ -1,4 +1,7 @@
+mod game;
+
 use futures::{SinkExt, StreamExt};
+use game::new_game;
 use log::*;
 use serde::{Deserialize, Serialize};
 use std::net::SocketAddr;
@@ -35,6 +38,7 @@ async fn handle_connection(peer: SocketAddr, stream: TcpStream) -> Result<()> {
 
       match msg.job {
         1 => resp = "hi",
+        101 => 
         _ => resp = "e",
       }
 
